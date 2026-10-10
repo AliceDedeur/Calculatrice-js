@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #962323; /* Un fond sombre fait mieux ressortir la calculatrice */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* La boîte principale */
+.pave {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: yellowgreen;
+    border-radius: .5rem;
+    width: 100%;
+    max-width: 400px; /* Évite que la calculatrice devienne géante sur grand écran */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* L'écran de résultat */
+.resultat {
+    width: 100%;
+    font-size: 2rem;
+    border: 2px solid #556b2f;
+    background-color: #ffffff;
+    border-radius: .5rem;
+    padding: 0.8rem;
+    text-align: right; /* Les chiffres se lisent à droite sur une calculatrice */
+    min-height: 4.5rem;
+}
+
+/* Le Grid corrigé (sans espace) */
+.touches {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Écrit tout attaché */
+    gap: 0.5rem; /* Un petit espace entre les boutons */
+}
+
+/* Le style de chaque bouton */
+.touches .btn {
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.8rem;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Effet quand on passe la souris */
+.touches .btn:hover {
+    background-color: #dcdcdc;
+}
+
+/* Style optionnel pour le bouton égal */
+#btnEgale {
+    background-color: #ff9500;
+    color: white;
+    grid-column: span 4;
+}
+#btnEgale:hover {
+    background-color: #e08400;
+}
+
+/* Zone d'historique sous la calculatrice */
+#historique {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+#btnDell{
+    font-size: 1rem;
+}
